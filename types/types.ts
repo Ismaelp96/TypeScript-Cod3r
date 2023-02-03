@@ -226,6 +226,5 @@ let correntista: Correntista = {
   contaBancaria: contaBancaria,
   contatos: ['34567890', '98765432'],
 }
-
 correntista.contaBancaria.depositar(3000)
 console.log(correntista)
