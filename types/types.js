@@ -119,3 +119,9 @@ let funcionario2 = {
 console.log(funcionario2.supervisores);
 console.log(funcionario2.baterPonto(10));
 console.log(funcionario2.baterPonto(7));
+// Union Types
+let nota = 10;
+console.log(`Minha nota é ${nota}`);
+nota = '10';
+console.log(`Minha nota é ${nota}`);
+// nota = true
