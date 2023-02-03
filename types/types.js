@@ -69,3 +69,9 @@ function multiplicar(NumA, NumB) {
 }
 // console.log(multiplicar(2, 'Bia'))
 console.log(multiplicar(4.7, 9));
+// tipo função
+let calculo;
+// calculo = digaOi
+// calculo()
+calculo = multiplicar;
+console.log(calculo(5, 6));
