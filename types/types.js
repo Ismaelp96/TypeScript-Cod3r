@@ -139,7 +139,7 @@ function falha(msg) {
 }
 const produto = {
     nome: 'Sabão',
-    preco: -1,
+    preco: 4,
     validarProduto() {
         if (!this.nome || this.nome.trim().length == 0)
             falha('Precisa ter um nome');
@@ -149,3 +149,21 @@ const produto = {
     },
 };
 produto.validarProduto();
+// Valores Opcionais com Tipo "Null"
+let altura = 12;
+// altura = null
+let alturaOpcional = 12;
+alturaOpcional = null;
+const contato1 = {
+    nome: 'Fulano',
+    tel1: '98765432',
+    tel2: null,
+};
+console.log(contato1.nome);
+console.log(contato1.tel1);
+console.log(contato1.tel2);
+let podeSerNulo = null; // assumiu o tipo any
+podeSerNulo = 12;
+console.log(podeSerNulo);
+podeSerNulo = 'abc';
+console.log(podeSerNulo);
