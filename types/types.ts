@@ -36,3 +36,20 @@ console.log(endereco)
 
 endereco = ['Rua Importante', 1260, 'Bloco C']
 console.log(endereco)
+
+// enums
+
+enum Cor {
+  Cinza, // 0
+  Verde = 100, // 100
+  Azul = 10, // 2
+  Laranja,
+  Amerelo,
+  Vermelho = 100,
+}
+
+let minhaCor: Cor = Cor.Verde
+console.log(minhaCor)
+console.log(Cor.Azul)
+console.log(Cor.Laranja, Cor.Amerelo)
+console.log(Cor.Verde, Cor.Vermelho)
