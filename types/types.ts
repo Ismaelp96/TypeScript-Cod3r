@@ -62,3 +62,22 @@ carro = {
   Cavalos: 300,
 }
 console.log(carro)
+
+// funções
+function retornarMeuNome(): string {
+  return nome
+  //   return minhaIdade
+}
+console.log(retornarMeuNome())
+
+function digaOi(): void {
+  console.log('Oi')
+  //   return minhaIdade
+}
+digaOi()
+
+function multiplicar(NumA: number, NumB: number): number {
+  return NumA * NumB
+}
+// console.log(multiplicar(2, 'Bia'))
+console.log(multiplicar(4.7, 9))
