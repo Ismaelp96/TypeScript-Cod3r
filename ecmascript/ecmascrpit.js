@@ -49,3 +49,14 @@ falarCom('João');
 // console.log(this)
 // const arrowComThis = () => console.log(this)
 // arrowComThis()
+// Parâmetros padrão
+function contagemRegressiva(inicio = 5, fim = inicio - 5) {
+    console.log(inicio);
+    while (inicio > fim) {
+        inicio--;
+        console.log(inicio);
+    }
+    console.log('FIM!');
+}
+contagemRegressiva();
+contagemRegressiva(3);
