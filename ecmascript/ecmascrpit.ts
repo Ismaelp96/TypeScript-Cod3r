@@ -77,10 +77,20 @@ function contagemRegressiva(
 contagemRegressiva()
 contagemRegressiva(3)
 
-// Rest & Spread
+// Spread
 const numbers = [1, 10, 99, -5, 200, 1034]
 console.log(Math.max(...numbers))
 
 const turmaA: string[] = ['João', 'Maria', 'Fernando']
 const turmaB: string[] = ['Fernanda', 'Miguel', 'Lorena', ...turmaA]
 console.log(turmaB)
+
+// Rest
+function retornarArray(...args: number[]): number[] {
+  return args
+}
+
+const numeros = retornarArray(1, 2, 4, 6, 8)
+console.log(numeros)
+// Rest e Spread
+console.log(retornarArray(...numbers))
