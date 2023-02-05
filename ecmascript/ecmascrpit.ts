@@ -107,5 +107,37 @@ function tuplaParam2(...params: [number, string, boolean]) {
   //   console.log(Array.isArray(params))
   console.log(`2) ${params[0]} ${params[1]} ${params[2]}`)
 }
-
 tuplaParam2(...tupla)
+
+// Destructuring (Array)
+const caracteristicas = ['Motor Zetec 1.8', 2020]
+// const motor = caracteristicas[0]
+// const ano = caracteristicas[1]
+const [motor, ano] = caracteristicas
+console.log(motor)
+console.log(ano)
+
+// Destructuring (Objetio)
+const item = {
+  nome: 'SSD 480',
+  preco: 200,
+  caracteristicas: {
+    y: 'Novo',
+    z: 'e',
+    w: 'importado',
+  },
+}
+
+const nomeItem = item.nome
+const precoItem = item.preco
+console.log(nomeItem)
+console.log(precoItem)
+
+const {
+  nome: n,
+  preco: p,
+  caracteristicas: { w, y, z },
+} = item
+console.log(n)
+console.log(p)
+console.log(y, z, w)
