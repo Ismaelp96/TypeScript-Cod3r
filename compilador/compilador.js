@@ -13,3 +13,14 @@ function soma(a, b) {
 let qualquerCoisa;
 qualquerCoisa = 12;
 qualquerCoisa = 'abc';
+//strictNullChecks, noUnusedParameters e noUnsedLocals
+function saudar(isManha) {
+    let saudacao;
+    if (isManha) {
+        saudacao = 'Bom dia!';
+    }
+    else {
+        saudacao = 'boa noite!';
+    }
+    return saudacao;
+}

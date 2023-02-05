@@ -14,3 +14,14 @@ function soma(a: any, b: any) {
 let qualquerCoisa
 qualquerCoisa = 12
 qualquerCoisa = 'abc'
+
+//strictNullChecks, noUnusedParameters e noUnsedLocals
+function saudar(isManha: boolean): string {
+  let saudacao: string
+  if (isManha) {
+    saudacao = 'Bom dia!'
+  } else {
+    saudacao = 'boa noite!'
+  }
+  return saudacao
+}
