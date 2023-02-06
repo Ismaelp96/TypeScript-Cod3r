@@ -141,3 +141,20 @@ const {
 console.log(n)
 console.log(p)
 console.log(y, z, w)
+
+// Template String
+// sem Template String
+const usuarioID: string = 'SuporteCod3r'
+const notificacoes: string = '9'
+// const boasVindas = 'Boas vindas ' + usuarioID + ' Notificações: ' + notificacoes
+
+// com Template String
+
+const boasVindas = `
+Boas vindas ao ${usuarioID}, Notificações: ${
+  parseInt(notificacoes) > 9 ? '+9' : notificacoes
+}`
+
+console.log(boasVindas)
+console.log(`${(1 + 1) * 30}`)
+console.log(`Motor: ${caracteristicas[0]}`)
