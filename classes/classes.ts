@@ -1,3 +1,4 @@
+// #01
 class Data {
   // Público por padrão
   dia: number
@@ -10,13 +11,10 @@ class Data {
     this.ano = ano
   }
 }
-
 const aniversario = new Data(25)
-
 aniversario.dia = 25
 aniversario.mes = 4
 aniversario.ano = 1996
-
 console.log(aniversario.dia)
 console.log(aniversario)
 
@@ -24,6 +22,7 @@ const casamento = new Data() // posso omitir os "()"
 casamento.ano = 2017
 console.log(casamento)
 
+// #02
 class DataEsperta {
   constructor(
     public dia: number = 1,
@@ -44,3 +43,21 @@ console.log(aniversarioEsperto)
 const casamentoEsperto = new DataEsperta() // posso omitir os "()"
 casamentoEsperto.ano = 2017
 console.log(casamentoEsperto)
+
+// Desafio class Produto
+// Atributos: nome, preco e desconto
+// Criar o construtor
+// 1) O Desconto é opcional (valor padrão 0)
+// 2) Criar dois produtos: passando dois e três params
+
+class Produto {
+  constructor(
+    public nome: string,
+    public preco: number,
+    public desconto: number = 0
+  ) {}
+}
+const produto1 = new Produto('SSD 280GB', 200.2, 0.15)
+const produto2 = new Produto('Monitor 24SBHQ', 780.0)
+produto2.desconto = 0.06
+console.log(produto1, produto2)

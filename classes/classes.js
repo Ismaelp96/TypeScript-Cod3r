@@ -1,4 +1,5 @@
 "use strict";
+// #01
 class Data {
     constructor(dia = 1, mes = 1, ano = 1970) {
         this.dia = dia;
@@ -15,6 +16,7 @@ console.log(aniversario);
 const casamento = new Data(); // posso omitir os "()"
 casamento.ano = 2017;
 console.log(casamento);
+// #02
 class DataEsperta {
     constructor(dia = 1, mes = 1, ano = 1970) {
         this.dia = dia;
@@ -31,3 +33,19 @@ console.log(aniversarioEsperto);
 const casamentoEsperto = new DataEsperta(); // posso omitir os "()"
 casamentoEsperto.ano = 2017;
 console.log(casamentoEsperto);
+// Desafio class Produto
+// Atributos: nome, preco e desconto
+// Criar o construtor
+// 1) O Desconto é opcional (valor padrão 0)
+// 2) Criar dois produtos: passando dois e três params
+class Produto {
+    constructor(nome, preco, desconto = 0) {
+        this.nome = nome;
+        this.preco = preco;
+        this.desconto = desconto;
+    }
+}
+const produto1 = new Produto('SSD 280GB', 200.2, 0.15);
+const produto2 = new Produto('Monitor 24SBHQ', 780.0);
+produto2.desconto = 0.06;
+console.log(produto1, produto2);
