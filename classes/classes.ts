@@ -56,8 +56,20 @@ class Produto {
     public preco: number,
     public desconto: number = 0
   ) {}
+
+  // também é public
+  precoComDesconto(): number {
+    return this.preco * (1 - this.desconto)
+  }
+
+  public resumo(): string {
+    return `${this.nome} Apartir de: R$${this.precoComDesconto()} (${
+      this.desconto * 100
+    }% OFF)`
+  }
 }
-const produto1 = new Produto('SSD 280GB', 200.2, 0.15)
+const produto1 = new Produto('SSD 280GB', 200.0, 0.15)
 const produto2 = new Produto('Monitor 24SBHQ', 780.0)
 produto2.desconto = 0.06
-console.log(produto1, produto2)
+console.log(produto1.resumo())
+console.log(produto2.resumo())
