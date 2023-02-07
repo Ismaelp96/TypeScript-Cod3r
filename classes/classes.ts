@@ -73,3 +73,58 @@ const produto2 = new Produto('Monitor 24SBHQ', 780.0)
 produto2.desconto = 0.06
 console.log(produto1.resumo())
 console.log(produto2.resumo())
+
+// Modificadores de Acesso
+
+class Carro {
+  private velocidadeAtual: number = 0
+
+  constructor(
+    public marca: string,
+    public modelo: string,
+    private velocidadeMaxima: number = 200
+  ) {}
+
+  private alterarVelocidade(delta: number): number {
+    const novaVelocidade = this.velocidadeAtual + delta
+    const velocidadeValida =
+      novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima
+    if (velocidadeValida) {
+      this.velocidadeAtual = novaVelocidade
+    } else {
+      this.velocidadeAtual = delta > 0 ? this.velocidadeMaxima : 0
+    }
+    return this.velocidadeAtual
+  }
+
+  public acelerar(): number {
+    return this.alterarVelocidade(5)
+  }
+
+  public frear(): number {
+    return this.alterarVelocidade(-5)
+  }
+}
+
+const carro1 = new Carro('Ford', 'Ka', 185)
+
+Array(50)
+  .fill(0)
+  .forEach(() => carro1.acelerar())
+
+console.log(carro1.acelerar())
+
+Array(35)
+  .fill(0)
+  .forEach(() => carro1.frear())
+console.log(carro1.frear())
+
+// simular "erros"
+// carro1.velocidadeAtual = 300
+// console.log('atual ->' + carro1.velocidadeAtual)
+
+// carro1.velocidadeMaxima = 500
+// console.log('Máxima ->' + carro1.velocidadeMaxima)
+
+// carro1.alterarVelocidade(150)
+// console.log('atual ->' + carro1.velocidadeAtual)
