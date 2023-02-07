@@ -152,3 +152,23 @@ const f40 = new Ferrari('F40', 324)
 console.log(`Marca:${f40.marca} Modelo:${f40.modelo}`)
 console.log(f40.acelerar())
 console.log(f40.frear())
+
+// Getters & Setters
+class Pessoa {
+  private _idade: number = 0
+  get idade(): number {
+    return this._idade
+  }
+  set idade(valor: number) {
+    if (valor >= 0 && valor <= 120) {
+      this._idade = valor
+    }
+  }
+}
+
+const pessoa1 = new Pessoa()
+pessoa1.idade = 10 // set
+console.log(pessoa1.idade) // get
+
+pessoa1.idade = -3
+console.log(pessoa1.idade)
