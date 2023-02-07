@@ -85,7 +85,7 @@ class Carro {
     private velocidadeMaxima: number = 200
   ) {}
 
-  private alterarVelocidade(delta: number): number {
+  protected alterarVelocidade(delta: number): number {
     const novaVelocidade = this.velocidadeAtual + delta
     const velocidadeValida =
       novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima
@@ -128,3 +128,23 @@ console.log(carro1.frear())
 
 // carro1.alterarVelocidade(150)
 // console.log('atual ->' + carro1.velocidadeAtual)
+
+//OBS:
+// private -> apenas dentro da Class!
+// protected -> visivel dentro da class e pode ser transmitido por herança!
+// Public -> fica visivel para todo mundo!
+
+// Herança
+class Ferrari extends Carro {
+  public acelerar(): number {
+    return this.alterarVelocidade(20)
+  }
+
+  public frear(): number {
+    return this.alterarVelocidade(-15)
+  }
+}
+const f40 = new Ferrari('Ferrari', 'F40', 324)
+console.log(`${f40.marca} ${f40.modelo}`)
+console.log(f40.acelerar())
+console.log(f40.frear())
