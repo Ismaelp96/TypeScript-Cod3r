@@ -151,3 +151,29 @@ Matematica.PI = 3.1416;
 // console.log(m1.areaCirc(4))
 // console.log(new Matematica().areaCirc(4)) sem static
 console.log(Matematica.areaCirc(4));
+// Abstract Class
+class Calculo {
+    constructor() {
+        this.resultado = 0;
+    }
+    getResultado() {
+        return this.resultado;
+    }
+}
+class Soma extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((t, a) => t + a);
+    }
+}
+class Multiplicacao extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((t, a) => t * a);
+    }
+}
+// polimorfismo: em momentos diferentes tem formas diferentes soma ou mutiplicação nos exemplos abaixo
+let c1 = new Soma();
+c1.executar(2, 3, 4, 5);
+console.log(c1.getResultado());
+c1 = new Multiplicacao();
+c1.executar(2, 3, 4, 5);
+console.log(c1.getResultado());
