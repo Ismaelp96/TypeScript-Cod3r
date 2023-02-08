@@ -177,7 +177,7 @@ class Matematica {
   static PI: number = 3.1416
 
   static areaCirc(raio: number): number {
-    return this.PI * raio * raio
+    return Matematica.PI * raio * raio
   }
 }
 
@@ -210,6 +210,7 @@ class Multiplicacao extends Calculo {
     this.resultado = numeros.reduce((t, a) => t * a)
   }
 }
+
 // polimorfismo: em momentos diferentes tem formas diferentes soma ou mutiplicação nos exemplos abaixo
 let c1: Calculo = new Soma()
 c1.executar(2, 3, 4, 5)
@@ -218,3 +219,19 @@ console.log(c1.getResultado())
 c1 = new Multiplicacao()
 c1.executar(2, 3, 4, 5)
 console.log(c1.getResultado())
+
+// Construtor Privado & Singleton
+class Unico {
+  private static instance: Unico = new Unico()
+  private constructor() {}
+
+  static getInstance(): Unico {
+    return Unico.instance
+  }
+  agora() {
+    return new Date()
+  }
+}
+
+// const errado = new Unico()
+console.log(Unico.getInstance().agora())
