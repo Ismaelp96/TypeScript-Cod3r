@@ -190,3 +190,14 @@ class Unico {
 Unico.instance = new Unico();
 // const errado = new Unico()
 console.log(Unico.getInstance().agora());
+// Atributos Somente Leitura
+class Aviao {
+    constructor(modelo, prefixo) {
+        this.prefixo = prefixo;
+        this.modelo = modelo;
+    }
+}
+const turboHelice = new Aviao('Tu-114', 'PT-ABC');
+// turboHelice.modelo = 'DC-8'
+// turboHelice.prefixo = 'PT-DEF'
+console.log(turboHelice);
