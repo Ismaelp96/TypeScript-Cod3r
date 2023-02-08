@@ -109,3 +109,4 @@ estagiario.primeiroNome = 'Le';
 console.log(estagiario.primeiroNome);
 estagiario.primeiroNome = 'Leonardo';
 console.log(estagiario.primeiroNome);
+//# sourceMappingURL=desafio.js.map

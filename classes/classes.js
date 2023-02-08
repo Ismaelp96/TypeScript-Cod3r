@@ -201,3 +201,4 @@ const turboHelice = new Aviao('Tu-114', 'PT-ABC');
 // turboHelice.modelo = 'DC-8'
 // turboHelice.prefixo = 'PT-DEF'
 console.log(turboHelice);
+//# sourceMappingURL=classes.js.map

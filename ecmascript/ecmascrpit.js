@@ -168,3 +168,4 @@ console.log(`Nome: ${primeiroNome}, Experiência: ${experiencia} anos`);
 //   .then((res) => res.json())
 //   .then((personagem) => console.log(personagem.name))
 //   .catch((err) => console.log(`Catch!! ${err}`))
+//# sourceMappingURL=ecmascrpit.js.map

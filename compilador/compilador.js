@@ -24,3 +24,4 @@ function saudar(isManha) {
     }
     return saudacao;
 }
+//# sourceMappingURL=compilador.js.map
