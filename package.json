@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^18.13.0",
     "live-server": "^1.1.0",
     "systemjs": "^0.21.6"
   }
