@@ -26,3 +26,18 @@ mudarNome(pessoa)
 saudarComOi(pessoa)
 // saudarComOi({ nome: 'Jonas', idade: 27, altura: 1.75 })
 pessoa.saudar('SkyWalker')
+
+// Usando Class...
+class Cliente implements Humano {
+  nome: string = ''
+  ultimaCompra: Date = new Date()
+  saudar(sobrenome: string) {
+    console.log(`Olá, meu nome é ${this.nome} ${sobrenome}`)
+  }
+}
+
+const meuCliente = new Cliente()
+meuCliente.nome = 'Han'
+saudarComOi(meuCliente)
+meuCliente.saudar('Solo')
+console.log(meuCliente.ultimaCompra)
