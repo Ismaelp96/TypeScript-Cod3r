@@ -12,4 +12,5 @@ const pessoa = {
 saudarComOi(pessoa);
 mudarNome(pessoa);
 saudarComOi(pessoa);
+saudarComOi({ nome: 'Jonas', idade: 27, altura: 1.75 });
 //# sourceMappingURL=interfaces.js.map

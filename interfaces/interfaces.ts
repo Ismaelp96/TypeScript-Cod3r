@@ -1,5 +1,7 @@
 interface Humano {
   nome: string
+  idade?: number
+  [prop: string]: any
 }
 
 function saudarComOi(pessoa: Humano) {
@@ -18,3 +20,4 @@ const pessoa = {
 saudarComOi(pessoa)
 mudarNome(pessoa)
 saudarComOi(pessoa)
+saudarComOi({ nome: 'Jonas', idade: 27, altura: 1.75 })
