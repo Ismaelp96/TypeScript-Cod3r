@@ -1,7 +1,7 @@
 ///<reference path="geometriaCirc.ts" />
 ///<reference path="geometriaReact.ts" />
 
-const PI = 2.99
+// const PI = 2.99
 console.log(Geometria.Area.circunferencia(10))
 console.log(Geometria.Area.retangulo(10, 20))
-console.log(PI)
+// console.log(PI)
