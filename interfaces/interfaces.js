@@ -41,4 +41,20 @@ potencia = function (base, exp) {
 console.log(potencia(3, 10));
 console.log(Math.pow(3, 10));
 console.log(3 ** 10);
+class RealA {
+    a() { }
+}
+class RealAB {
+    a() { }
+    b() { }
+}
+class RealABC {
+    a() { }
+    b() { }
+    c() { }
+}
+class AbstrataABD {
+    a() { }
+    b() { }
+}
 //# sourceMappingURL=interfaces.js.map
