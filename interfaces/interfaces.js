@@ -57,4 +57,23 @@ class AbstrataABD {
     a() { }
     b() { }
 }
+Object.prototype.log = function () {
+    console.log(this.toString());
+};
+const i = 2;
+const g = 3;
+const h = 4;
+console.log(i);
+console.log(g);
+console.log(h);
+i.log();
+y.log();
+z.log();
+const cli = {
+    nome: 'Pedro',
+    toString() {
+        return this.nome;
+    },
+};
+cli.log();
 //# sourceMappingURL=interfaces.js.map
