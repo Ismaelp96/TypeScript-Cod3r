@@ -87,7 +87,7 @@ console.log(new DiferancaEntreDatas(d1, d2).executar())
 // Atributo: fila(Array)
 // Métodos: entrar, próximo, imprimir
 
-class Fila<T> {
+class Fila<T extends number | string> {
   private fila: Array<T>
   constructor(...args: T[]) {
     this.fila = args
@@ -116,3 +116,8 @@ console.log(fila.proximo())
 console.log(fila.proximo())
 console.log(fila.proximo())
 fila.imprimir()
+
+const novaFila = new Fila<number>(1, 2, 3)
+novaFila.imprimir()
+
+// const outraFila = new Fila<boolean>(true, false)

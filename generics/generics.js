@@ -101,4 +101,7 @@ console.log(fila.proximo());
 console.log(fila.proximo());
 console.log(fila.proximo());
 fila.imprimir();
+const novaFila = new Fila(1, 2, 3);
+novaFila.imprimir();
+// const outraFila = new Fila<boolean>(true, false)
 //# sourceMappingURL=generics.js.map
