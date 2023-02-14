@@ -91,7 +91,7 @@ class ContaCorrent {
     this.saldo = saldo
   }
   @congelar
-  sacar(valor: number) {
+  sacar(@paramInfo valor: number) {
     if (valor <= this.saldo) {
       this.saldo -= valor
       return true
@@ -142,4 +142,11 @@ function naoNegativo(alvo: any, nomePropriedade: string) {
       }
     },
   })
+}
+
+// Decorator de Parâmetro
+function paramInfo(alvo: any, nomeMetodo: string, indiceParam: number) {
+  console.log(`Alvo: ${alvo}`)
+  console.log(`Método: ${nomeMetodo}`)
+  console.log(`Índice Param: ${indiceParam}`)
 }
