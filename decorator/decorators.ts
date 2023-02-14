@@ -1,3 +1,4 @@
+// Criando um Decorator
 function logarClasse(construtor: Function) {
   console.log(construtor)
 }
@@ -13,7 +14,6 @@ function decorator(obj: { a: string; b?: number }) {
     console.log(obj.a + ' ' + obj.b)
   }
 }
-// Criando um Decorator
 
 // Alterando Construtor com Decorator de Class
 type Construtor = { new (...args: any[]): {} }
@@ -38,7 +38,7 @@ interface Eletrodomestico {
 // @logarClasse
 // @logarClasseSe(false)
 // @decorator({ a: 'Teste', b: 123 })
-// @LogarObjeto
+@LogarObjeto
 @imprimivel
 class Eletrodomestico {
   constructor() {
