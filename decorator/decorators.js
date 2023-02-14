@@ -76,4 +76,40 @@ function perfilAdmin(constructor) {
     };
 }
 // Decorator de Método
+class ContaCorrent {
+    constructor(saldo) {
+        this.saldo = saldo;
+    }
+    sacar(valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    getSaldo() {
+        return this.saldo;
+    }
+}
+__decorate([
+    congelar
+], ContaCorrent.prototype, "sacar", null);
+__decorate([
+    congelar
+], ContaCorrent.prototype, "getSaldo", null);
+const cc = new ContaCorrent(10248.57);
+cc.sacar(5000);
+console.log(cc.getSaldo());
+// cc.getSaldo = function () {
+//   return this['saldo'] + 7000
+// }
+console.log(cc.getSaldo());
+// Object.freeze()
+function congelar(alvo, nomeMetodo, descriptor) {
+    console.log(alvo);
+    console.log(nomeMetodo);
+    descriptor.writable = false;
+}
 //# sourceMappingURL=decorators.js.map

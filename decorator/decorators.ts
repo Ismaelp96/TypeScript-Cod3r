@@ -83,3 +83,44 @@ function perfilAdmin<T extends Construtor>(constructor: T) {
 }
 
 // Decorator de Método
+class ContaCorrent {
+  private saldo: number
+
+  constructor(saldo: number) {
+    this.saldo = saldo
+  }
+  @congelar
+  sacar(valor: number) {
+    if (valor <= this.saldo) {
+      this.saldo -= valor
+      return true
+    } else {
+      return false
+    }
+  }
+  @congelar
+  getSaldo() {
+    return this.saldo
+  }
+}
+
+const cc = new ContaCorrent(10248.57)
+cc.sacar(5000)
+console.log(cc.getSaldo())
+
+// cc.getSaldo = function () {
+//   return this['saldo'] + 7000
+// }
+console.log(cc.getSaldo())
+
+// Object.freeze()
+
+function congelar(
+  alvo: any,
+  nomeMetodo: string,
+  descriptor: PropertyDescriptor
+) {
+  console.log(alvo)
+  console.log(nomeMetodo)
+  descriptor.writable = false
+}
