@@ -84,6 +84,7 @@ function perfilAdmin<T extends Construtor>(constructor: T) {
 
 // Decorator de Método
 class ContaCorrent {
+  @naoNegativo
   private saldo: number
 
   constructor(saldo: number) {
@@ -106,6 +107,7 @@ class ContaCorrent {
 
 const cc = new ContaCorrent(10248.57)
 cc.sacar(5000)
+cc.sacar(5248.57)
 console.log(cc.getSaldo())
 
 // cc.getSaldo = function () {
@@ -123,4 +125,21 @@ function congelar(
   console.log(alvo)
   console.log(nomeMetodo)
   descriptor.writable = false
+}
+
+// Decorator Atributo
+function naoNegativo(alvo: any, nomePropriedade: string) {
+  delete alvo[nomePropriedade]
+  Object.defineProperty(alvo, nomePropriedade, {
+    get: function (): any {
+      return alvo['_' + nomePropriedade]
+    },
+    set: function (valor: any): void {
+      if (valor < 0) {
+        throw new Error('Saldo Inválido')
+      } else {
+        alvo['_' + nomePropriedade] = valor
+      }
+    },
+  })
 }
