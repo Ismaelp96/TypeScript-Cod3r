@@ -54,3 +54,32 @@ function imprimivel(constructor: Function) {
 // (<any>new Eletrodomestico()).imprimir()
 const eletro = new Eletrodomestico()
 eletro.imprimir && eletro.imprimir()
+
+// Desafio Decorator perfilAdmin
+
+const usuarioLogado = {
+  nome: 'Guilherme Filho',
+  email: 'guigui@gmail.com',
+  admin: true,
+}
+@perfilAdmin
+class MudancaAdministrativa {
+  critico() {
+    console.log('Algo crítico foi alterado!')
+  }
+}
+new MudancaAdministrativa().critico()
+
+// Resposta
+function perfilAdmin<T extends Construtor>(constructor: T) {
+  return class extends constructor {
+    constructor(...args: any[]) {
+      super(...args)
+      if (!usuarioLogado || !usuarioLogado.admin) {
+        throw new Error('Sem permissão!')
+      }
+    }
+  }
+}
+
+// Decorator de Método
